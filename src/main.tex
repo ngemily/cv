@@ -23,7 +23,7 @@
 % List styles
 \newlength{\myleft}
 \setlength{\myleft}{1cm}
- 
+
 \usepackage{enumitem}
 \SetLabelAlign{myright}{\strut\smash{\parbox[t]{\labelwidth}{\raggedleft#1}}}
 \newlist{cvlist}{description}{1}
@@ -42,7 +42,7 @@
 \newcommand{\phone}{\faPhone \, +1-647-123-4567 }
 \newcommand{\github}{\faGithub \, ngemily}
 
-\input{contact} % Replaces dummy data
+\input{src/contact} % Replaces dummy data
 
 \begin{document}
 
@@ -68,16 +68,16 @@
 
         \textit{IO Subsystem}
 
-        \lipsum[1-2]
+        \input{src/altera}
     \cvitem{2014}{Purpose Invest}
 
-        \lipsum[1-2]
+        \input{src/purpose}
     \cvitem{2013}{DonorIQ}
 
-        \lipsum
+        \input{src/donoriq}
     \cvitem{2012}{PenyoPal}
 
-        \lipsum
+        \input{src/penyopal}
 \end{cvlist}
 
 \end{document}

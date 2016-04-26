@@ -1,4 +1,4 @@
-SRC=main.tex
+SRC=src/main.tex
 
 all:
 	xelatex $(SRC)
