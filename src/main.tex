@@ -21,21 +21,29 @@
   {\Large\bfseries}{\thesection}{}{}[\hrulefill]
 
 % List styles
-\newlength{\myleft}
-\setlength{\myleft}{1cm}
-
 \usepackage{enumitem}
 \SetLabelAlign{myright}{\strut\smash{\parbox[t]{\labelwidth}{\raggedleft#1}}}
 \newlist{cvlist}{description}{1}
-\setlist[cvlist]{style=multiline,align=myright,labelwidth=\the\myleft,labelsep=!,leftmargin=!}
+\setlist[cvlist]{style=multiline,align=myright,labelwidth=\the\myleft,labelsep=!,
+    leftmargin=!}
 
-\newcommand{\cvitem}[2]{\item[#1] \textbf{#2}}
+\newcommand{\cvitem}[3]{\item[#1] \textbf{#2} \\ \textsl{#3}}
+\newcommand{\cvitemcompact}[3]{\item[#1] \itab{\textbf{#2}} \tab{\textit{#3}}}
+
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\newcommand{\tab}[1]{\hspace{.3\textwidth}\rlap{#1}}
+
 
 % Lipsum
 \usepackage{lipsum}
 \setlipsumdefault{1}
 
+% Font
 \renewcommand{\familydefault}{\sfdefault}
+
+% Main backbone placement
+\newlength{\myleft}
+\setlength{\myleft}{1cm}
 
 % Contact info
 \newcommand{\email}{\faEnvelope \, ngemily2@gmail.com }
@@ -55,29 +63,43 @@
 \section*{Education}
 
 \begin{cvlist}
-    \cvitem{2016}{University of Toronto}
-
-        BASc. in Engineering Science Major in Electrical and Computer
-        Engineering
+    \cvitem{2016}{University of Toronto}{\textnormal{BA.Sc. in Engineering
+    Science Major in Electrical and Computer Engineering}}
 \end{cvlist}
 
 \section*{Work}
 
 \begin{cvlist}
-    \cvitem{2015}{Altera}
-
-        \textit{IO Subsystem}
+    \cvitem{2015}{Altera}{IP \& Device Software}
 
         \input{src/altera}
-    \cvitem{2014}{Purpose Invest}
+    \cvitem{2014}{Purpose Invest}{Web}
 
         \input{src/purpose}
-    \cvitem{2013}{DonorIQ}
-
-        \input{src/donoriq}
-    \cvitem{2012}{PenyoPal}
+    \cvitem{2012}{PenyoPal}{Mobile}
 
         \input{src/penyopal}
 \end{cvlist}
+
+\section*{Extra-curriculars}
+
+\begin{cvlist}[noitemsep]
+    \cvitemcompact{2016}{University Bouldering Series}
+        {Indoor rock climbing inter-university competition.}
+
+    \cvitemcompact{2014}{Iron Sports}{Powerlifiting society.}
+
+    \cvitemcompact{2013}{Iron Dragons}{Dragon boat team representing UofT}
+
+    \cvitemcompact{2012}{Hacker Academy}{Technology and programming society.}
+
+\end{cvlist}
+
+\section*{Skills}
+
+\begin{itemize}
+    \item skill 1
+    \item skill 2
+\end{itemize}
 
 \end{document}
