@@ -3,6 +3,7 @@
 \usepackage{calc}
 \usepackage{fontawesome}
 \usepackage{fullpage}
+\usepackage[dvipsnames]{xcolor}
 
 % Headers and footers
 \usepackage{fancyhdr}
@@ -17,15 +18,16 @@
 
 % Section title style
 \usepackage{titlesec}
-\titleformat{\section}[runin]
-  {\Large\bfseries}{\thesection}{}{}[\hrulefill]
+\titleformat{\section}[hang]
+  {\Large\bfseries}{\thesection}{}
+  {\rule{\the\myleft+\the\gutterwidth}{0pt}}[\titlerule]
 
 % List styles
 \usepackage{enumitem}
 \SetLabelAlign{myright}{\strut\smash{\parbox[t]{\labelwidth}{\raggedleft#1}}}
 \newlist{cvlist}{description}{1}
-\setlist[cvlist]{style=multiline,align=myright,labelwidth=\the\myleft,labelsep=!,
-    leftmargin=!}
+\setlist[cvlist]{style=multiline,align=myright,labelwidth=\the\myleft,
+    labelsep=\the\gutterwidth,leftmargin=!}
 
 \newcommand{\cvitem}[3]{\item[#1] \textbf{#2} \\ \textsl{#3}}
 \newcommand{\cvitemcompact}[3]{\item[#1] \itab{\textbf{#2}} \tab{\textit{#3}}}
@@ -42,6 +44,9 @@
 \renewcommand{\familydefault}{\sfdefault}
 
 % Main backbone placement
+\newlength{\gutterwidth}
+\setlength{\gutterwidth}{1em}
+
 \newlength{\myleft}
 \setlength{\myleft}{1cm}
 
@@ -60,14 +65,18 @@
 
 \phone \hfill \email \hfill \github
 
+\color{NavyBlue}
 \section*{Education}
+\color{black}
 
 \begin{cvlist}
     \cvitem{2016}{University of Toronto}{\textnormal{BA.Sc. in Engineering
     Science Major in Electrical and Computer Engineering}}
 \end{cvlist}
 
+\color{OliveGreen}
 \section*{Work}
+\color{black}
 
 \begin{cvlist}
     \cvitem{2015}{Altera}{IP \& Device Software}
@@ -81,7 +90,9 @@
         \input{src/penyopal}
 \end{cvlist}
 
+\color{RedOrange}
 \section*{Extra-curriculars}
+\color{black}
 
 \begin{cvlist}[noitemsep]
     \cvitemcompact{2016}{University Bouldering Series}
@@ -95,7 +106,9 @@
 
 \end{cvlist}
 
+\color{purple}
 \section*{Skills}
+\color{black}
 
 \begin{itemize}
     \item skill 1
