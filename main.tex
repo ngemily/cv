@@ -1,0 +1,83 @@
+\documentclass{article}
+
+\usepackage{calc}
+\usepackage{fontawesome}
+\usepackage{fullpage}
+
+% Headers and footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\fancyhf{}
+\lfoot{\phone}
+\cfoot{\email}
+\rfoot{\github}
+
+\renewcommand{\headrulewidth}{0pt}
+
+% Section title style
+\usepackage{titlesec}
+\titleformat{\section}[runin]
+  {\Large\bfseries}{\thesection}{}{}[\hrulefill]
+
+% List styles
+\newlength{\myleft}
+\setlength{\myleft}{1cm}
+ 
+\usepackage{enumitem}
+\SetLabelAlign{myright}{\strut\smash{\parbox[t]{\labelwidth}{\raggedleft#1}}}
+\newlist{cvlist}{description}{1}
+\setlist[cvlist]{style=multiline,align=myright,labelwidth=\the\myleft,labelsep=!,leftmargin=!}
+
+\newcommand{\cvitem}[2]{\item[#1] \textbf{#2}}
+
+% Lipsum
+\usepackage{lipsum}
+\setlipsumdefault{1}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+% Contact info
+\newcommand{\email}{\faEnvelope \, ngemily2@gmail.com }
+\newcommand{\phone}{\faPhone \, +1-647-123-4567 }
+\newcommand{\github}{\faGithub \, ngemily}
+
+\input{contact} % Replaces dummy data
+
+\begin{document}
+
+{
+\LARGE\bfseries Emily Ng \hrulefill
+}
+
+\phone \hfill \email \hfill \github
+
+\section*{Education}
+
+\begin{cvlist}
+    \cvitem{2016}{University of Toronto}
+
+        BASc. in Engineering Science Major in Electrical and Computer
+        Engineering
+\end{cvlist}
+
+\section*{Work}
+
+\begin{cvlist}
+    \cvitem{2015}{Altera}
+
+        \textit{IO Subsystem}
+
+        \lipsum[1-2]
+    \cvitem{2014}{Purpose Invest}
+
+        \lipsum[1-2]
+    \cvitem{2013}{DonorIQ}
+
+        \lipsum
+    \cvitem{2012}{PenyoPal}
+
+        \lipsum
+\end{cvlist}
+
+\end{document}
