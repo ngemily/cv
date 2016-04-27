@@ -60,6 +60,13 @@
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
 \newcommand{\tab}[1]{\hspace{.3\textwidth}\rlap{#1}}
 
+% Tikz
+\usepackage{tikz}
+\newcommand*\rectangled[1]{\tikz[baseline=(char.base)]{
+        \node[shape=rectangle,fill=\sectioncolour,inner sep=2.4pt,rounded
+        corners=4pt,thick]
+        (char) {\color{white}\small\textbf{#1}};
+}}
 
 % Lipsum
 \usepackage{lipsum}
@@ -94,6 +101,14 @@
     \section*{#2}
 }
 
+% Vertical overlap
+\newcommand{\tlap}[1]{\mbox{\vbox to 0pt{\vss\hbox{#1}}}}
+\newcommand{\blap}[1]{\mbox{\vbox to 0pt{\hbox{#1}\vss}}}
+
+% --------
+% Document
+% --------
+
 \begin{document}
 
 \cvsection[NavyBlue]{Education}
@@ -106,13 +121,33 @@
 \cvsection[OliveGreen]{Work}
 
 \begin{cvlist}
-    \cvitem{2015}{Altera}{IP \& Device Software}
+    \cvitem{2015}
+    {Altera}{IP \& Device Software}
+        \blap{\llap{\makebox[2em + \widthof{Verilog} + \widthof{IP \& Device Software}][l]{
+            \shortstack[r]{
+                \rectangled{Verilog} \\
+                \rectangled{C++} \\
+                \rectangled{Quartus}
+            }
+        }}}
 
         \input{src/altera}
     \cvitem{2014}{Purpose Invest}{Web}
+        \blap{\llap{\makebox[2em + \widthof{AngularJS} + \widthof{Web}][l]{
+            \shortstack[r]{
+                \rectangled{Adobe CS} \\
+                \rectangled{AngularJS}
+            }
+        }}}
 
         \input{src/purpose}
     \cvitem{2012}{PenyoPal}{Mobile}
+        \blap{\llap{\makebox[2em + \widthof{MOAI SDK} + \widthof{Mobile}][l]{
+            \shortstack[r]{
+                \rectangled{Lua} \\
+                \rectangled{MOAI SDK}
+            }
+        }}}
 
         \input{src/penyopal}
 \end{cvlist}
