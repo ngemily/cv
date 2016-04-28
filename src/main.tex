@@ -1,5 +1,9 @@
 \documentclass{article}
 
+% --------
+% Packages
+% --------
+
 \usepackage{calc}
 \usepackage{fontawesome}
 \usepackage{fullpage}
@@ -41,7 +45,7 @@
 \usepackage{titlesec}
 \titleformat{\section}[runin]
   {\Large\bfseries}{\thesection}{}
-  {\rule{\the\myleft+\the\gutterwidth}{0pt}}[ \hrulefill]
+  {\rule{\the\myleft+\the\gutterwidth}{0pt}\color{\sectioncolour}}[ \hrulefill]
 
 % List styles
 \usepackage{enumitem}
@@ -71,6 +75,10 @@
 \newlength{\myleft}
 \setlength{\myleft}{1cm}
 
+% ---------------------
+% User defined commands
+% ---------------------
+
 % Contact info
 \newcommand{\email}{\faEnvelope \, ngemily2@gmail.com }
 \newcommand{\phone}{\faPhone \, +1-647-123-4567 }
@@ -79,20 +87,23 @@
 
 \input{src/contact} % Replaces dummy data
 
+% Section+
+\newcommand{\sectioncolour}{Violet}
+\newcommand{\cvsection}[2]{
+    \renewcommand{\sectioncolour}{#1}
+    \section*{#2}
+}
+
 \begin{document}
 
-\color{NavyBlue}
-\section*{Education}
-\color{black}
+\cvsection{NavyBlue}{Education}
 
 \begin{cvlist}
     \cvitem{2016}{University of Toronto}{\textnormal{BA.Sc. in Engineering
     Science Major in Electrical and Computer Engineering}}
 \end{cvlist}
 
-\color{OliveGreen}
-\section*{Work}
-\color{black}
+\cvsection{OliveGreen}{Work}
 
 \begin{cvlist}
     \cvitem{2015}{Altera}{IP \& Device Software}
@@ -106,9 +117,7 @@
         \input{src/penyopal}
 \end{cvlist}
 
-\color{RedOrange}
-\section*{Extra-curriculars}
-\color{black}
+\cvsection{RedOrange}{Extra-curriculars}
 
 \begin{cvlist}[noitemsep]
     \cvitemcompact{2016}{University Bouldering Series}
@@ -122,9 +131,7 @@
 
 \end{cvlist}
 
-\color{purple}
-\section*{Skills}
-\color{black}
+\cvsection{Violet}{Skills}
 
 \begin{itemize}
     \item skill 1
