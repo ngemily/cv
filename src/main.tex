@@ -44,8 +44,8 @@
 % Section title style
 \usepackage{titlesec}
 \titleformat{\section}[runin]
-  {\Large\bfseries}{\thesection}{}
-  {\rule{\the\myleft+\the\gutterwidth}{0pt}\color{\sectioncolour}}[ \hrulefill]
+  {\Large\bfseries\color{\sectioncolour}}{\thesection}{}
+  {\rule{\the\myleft+\the\gutterwidth}{0pt}}[ \hrulefill]
 
 % List styles
 \usepackage{enumitem}
@@ -89,21 +89,21 @@
 
 % Section+
 \newcommand{\sectioncolour}{Violet}
-\newcommand{\cvsection}[2]{
+\newcommand{\cvsection}[2][black]{
     \renewcommand{\sectioncolour}{#1}
     \section*{#2}
 }
 
 \begin{document}
 
-\cvsection{NavyBlue}{Education}
+\cvsection[NavyBlue]{Education}
 
 \begin{cvlist}
     \cvitem{2016}{University of Toronto}{\textnormal{BA.Sc. in Engineering
     Science Major in Electrical and Computer Engineering}}
 \end{cvlist}
 
-\cvsection{OliveGreen}{Work}
+\cvsection[OliveGreen]{Work}
 
 \begin{cvlist}
     \cvitem{2015}{Altera}{IP \& Device Software}
@@ -117,7 +117,7 @@
         \input{src/penyopal}
 \end{cvlist}
 
-\cvsection{RedOrange}{Extra-curriculars}
+\cvsection[RedOrange]{Extra-curriculars}
 
 \begin{cvlist}[noitemsep]
     \cvitemcompact{2016}{University Bouldering Series}
@@ -131,7 +131,7 @@
 
 \end{cvlist}
 
-\cvsection{Violet}{Skills}
+\cvsection[Violet]{Skills}
 
 \begin{itemize}
     \item skill 1
