@@ -3,19 +3,34 @@
 \usepackage{calc}
 \usepackage{fontawesome}
 \usepackage{fullpage}
+
+% Colors
 \usepackage[dvipsnames]{xcolor}
+\definecolor{DarkGray}{gray}{0.2}
+\newcommand{\contactcolor}{DarkGray}
 
 % Headers and footers
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 
 \fancyhf{}
-\lfoot{\phone \hfill \email \hfill \github}
 \lhead{
+    \color{purple}
     {\LARGE\bfseries Emily Ng} \hrulefill \\
+    \color{\contactcolor}
     \phone \hfill \email \hfill \github
+    \color{black}
 }
-\rhead{\address\\~\\}
+\rhead{
+    \color{\contactcolor}
+    \address\\~\\
+    \color{black}
+}
+\lfoot{
+    \color{\contactcolor}
+    \phone \hfill \email \hfill \github
+    \color{black}
+}
 
 \addtolength{\headheight}{60pt}      % header height, default 12pt
 \addtolength{\headsep}{25pt}         % head to text separation, default 25pt
