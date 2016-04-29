@@ -12,6 +12,7 @@ body: >
     Our responsibilites included: device modeling, compilation support,
     simulation support and hardware support.
 
+
     During my intership, I was primarily responsible for Design Intent
     integration.  This is a key role in the development of Quartus, Altera's CAD
     tool for programming FPGAs. My secondary role was to pipeclean the flow and

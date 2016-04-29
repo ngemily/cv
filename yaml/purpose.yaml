@@ -14,6 +14,7 @@ body: >
     calculator saves the company from maintaining several extensive spreadsheets
     and saves hours of manual graph data entry.
 
+
     I designed a workflow to improve the monthly process of producing pie charts
     for publication in brochures. I wrote a PHP script that queries a database
     and formats the data in XML. I then wrote Javascript to use the Variable
