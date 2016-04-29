@@ -101,7 +101,7 @@
 \newcommand{\github}{\faGithub \, ngemily}
 \newcommand{\address}{40 St. George St. \\ Toronto, ON \\ M5S 2E4}
 
-\input{tex/contact} % Replaces dummy data
+\IfFileExists{tex/contact}{\input{tex/contact}}{} % Replaces dummy data
 
 % CV section
 \newcommand{\cvsection}[2][black]{
