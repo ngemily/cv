@@ -3,8 +3,7 @@ SRC=main.tex
 ENTRIES := $(patsubst %.yaml,%.tex,$(wildcard yaml/*.yaml))
 
 all: $(ENTRIES)
-	xelatex $(SRC)
-	#rubber --module xelatex --pdf $(SRC)
+	rubber --pdf $(SRC)
 
 %.tex : %.yaml
 	scripts/compile.pl $< $@
