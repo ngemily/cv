@@ -1,0 +1,11 @@
+---
+title:    Pipelined Processor
+subtitle: Computer Organization
+year:     2013
+tags:
+    - Quartus
+    - Modelsim
+body: >
+    My partner and I designed a pipelined processor, with data and control
+    hazard handling.  Our processor placed among the top 5 in our class for
+    performance.

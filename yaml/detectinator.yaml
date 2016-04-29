@@ -1,0 +1,14 @@
+---
+title:    Detectinator
+subtitle: Image processing
+year:     2016
+tags:
+    - OpenCV
+    - Vivado
+    - Modelsim
+body: >
+    For our final design project, our group designed a video game inspired
+    autonomous turret.  In real time we processed video input in order to aim a
+    laser at a target and make firing sound effects.  I implemented image
+    processing in hardware, including noise rejection, edge detection, and
+    single pass connected components analysis.
