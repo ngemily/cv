@@ -62,6 +62,8 @@
 \setlist[cvlist]{style=multiline,align=myright,labelwidth=\the\myleft,
     labelsep=\the\gutterwidth,leftmargin=!}
 
+%% item macro
+%   <year> <item> <short description>
 \newcommand{\cvitem}[3]{\item[#1] \textbf{#2} \\ \textsl{#3}}
 \newcommand{\cvitemcompact}[3]{\item[#1] \itab{\textbf{#2}} \tab{\textit{#3}}}
 
@@ -104,6 +106,7 @@
 \IfFileExists{tex/contact}{\input{tex/contact}}{} % Replaces dummy data
 
 % CV section
+%   [color] <section name>
 \newcommand{\cvsection}[2][black]{
     \renewcommand{\sectioncolor}{#1}
     \section*{#2}
