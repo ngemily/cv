@@ -10,42 +10,50 @@
 
 % Colors
 \usepackage[dvipsnames]{xcolor}
+
+%% Custom colors
 \definecolor{DarkGray}{gray}{0.4}
-\newcommand{\contactcolor}{DarkGray}
+
+%% Semantic colors
+\newcommand{\titlecolor}{purple}
+\newcommand{\accentcolor}{DarkGray}
+\newcommand{\sectioncolor}{Violet}
 
 % Headers and footers
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 
+%% HF contents
 \fancyhf{}
 \lhead{
-    \color{purple}
+    \color{\titlecolor}
     {\LARGE\bfseries Emily Ng} \hrulefill \\
-    \color{\contactcolor}
+    \color{\accentcolor}
     \phone \hfill \email \hfill \github
     \color{black}
 }
 \rhead{
-    \color{\contactcolor}
+    \color{\accentcolor}
     \address\\~\\
     \color{black}
 }
 \lfoot{
-    \color{\contactcolor}
+    \color{\accentcolor}
     \phone \hfill \email \hfill \github
     \color{black}
 }
 
+%% HF sizing
 \addtolength{\headheight}{60pt}      % header height, default 12pt
 \addtolength{\headsep}{25pt}         % head to text separation, default 25pt
 \renewcommand{\headrulewidth}{0pt}   % no rule under header
-\addtolength{\textheight}{-60pt}
+\addtolength{\textheight}{-60pt}     % header eats into main page
 
 % Section title style
 \usepackage{titlesec}
 \titleformat{\section}[runin]
-  {\Large\bfseries\color{\sectioncolour}}{\thesection}{}
-  {\rule{\the\myleft+\the\gutterwidth}{0pt}}[ \hrulefill]
+    {\Large\bfseries\color{\sectioncolor}}{\thesection}{0pt}
+    {\rule{\the\myleft+\the\gutterwidth}{0pt}}[ \hrulefill]
 
 % List styles
 \usepackage{enumitem}
@@ -57,15 +65,16 @@
 \newcommand{\cvitem}[3]{\item[#1] \textbf{#2} \\ \textsl{#3}}
 \newcommand{\cvitemcompact}[3]{\item[#1] \itab{\textbf{#2}} \tab{\textit{#3}}}
 
+%% MS Word like tab alignment
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
 \newcommand{\tab}[1]{\hspace{.3\textwidth}\rlap{#1}}
 
 % Tikz
 \usepackage{tikz}
+%% Draws text on a coloured, rounded rectangle.
 \newcommand*\rectangled[1]{\tikz[baseline=(char.base)]{
-        \node[shape=rectangle,fill=\sectioncolour,inner sep=2.4pt,rounded
-        corners=4pt,thick]
-        (char) {\color{white}\small\textbf{#1}};
+    \node[shape=rectangle,fill=\sectioncolor,inner sep=2.4pt,rounded corners=4pt]
+    (char) {\color{white}\small\textbf{#1}};
 }}
 
 % Lipsum
@@ -94,10 +103,9 @@
 
 \input{src/contact} % Replaces dummy data
 
-% Section+
-\newcommand{\sectioncolour}{Violet}
+% CV section
 \newcommand{\cvsection}[2][black]{
-    \renewcommand{\sectioncolour}{#1}
+    \renewcommand{\sectioncolor}{#1}
     \section*{#2}
 }
 
