@@ -1,5 +1,7 @@
 # Output
 *.aux
+*.log
+yaml/*.tex
 main.log
 main.pdf
 

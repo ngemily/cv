@@ -101,7 +101,7 @@
 \newcommand{\github}{\faGithub \, ngemily}
 \newcommand{\address}{40 St. George St. \\ Toronto, ON \\ M5S 2E4}
 
-\input{src/contact} % Replaces dummy data
+\input{tex/contact} % Replaces dummy data
 
 % CV section
 \newcommand{\cvsection}[2][black]{
@@ -129,35 +129,20 @@
 \cvsection[OliveGreen]{Work}
 
 \begin{cvlist}
-    \cvitem{2015}
-    {Altera}{IP \& Device Software}
-        \blap{\llap{\makebox[2em + \widthof{Verilog} + \widthof{IP \& Device Software}][l]{
-            \shortstack[r]{
-                \rectangled{Verilog} \\
-                \rectangled{C++} \\
-                \rectangled{Quartus}
-            }
-        }}}
+    \input{yaml/altera}
+    % \cvitem{2015}
+    % {Altera}{IP \& Device Software}
+    %     \blap{\llap{\makebox[2em + \widthof{Verilog} + \widthof{IP \& Device Software}][l]{
+    %         \shortstack[r]{
+    %             \rectangled{Verilog} \\
+    %             \rectangled{C++} \\
+    %             \rectangled{Quartus}
+    %         }
+    %     }}}
 
-        \input{src/altera}
-    \cvitem{2014}{Purpose Invest}{Web}
-        \blap{\llap{\makebox[2em + \widthof{AngularJS} + \widthof{Web}][l]{
-            \shortstack[r]{
-                \rectangled{Adobe CS} \\
-                \rectangled{AngularJS}
-            }
-        }}}
-
-        \input{src/purpose}
-    \cvitem{2012}{PenyoPal}{Mobile}
-        \blap{\llap{\makebox[2em + \widthof{MOAI SDK} + \widthof{Mobile}][l]{
-            \shortstack[r]{
-                \rectangled{Lua} \\
-                \rectangled{MOAI SDK}
-            }
-        }}}
-
-        \input{src/penyopal}
+    %     \input{yaml/altera}
+    \input{yaml/purpose}
+    \input{yaml/penyopal}
 \end{cvlist}
 
 \cvsection[RedOrange]{Extra-curriculars}

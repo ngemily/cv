@@ -1,0 +1,12 @@
+---
+title:    DonorIQ
+subtitle: Web
+year:     2013
+tags:
+    - AngularJS
+body: >
+    I wrote the administrator's user interface for the web app. This interface
+    allows the administrator to enter information about projects for which the
+    institution is seeking funding. I used AngularJS to develop the page. The
+    page performed user authentication and made HTTP requests to the backend
+    (written in Python by a co-worker). I wrote tests using Capybara.

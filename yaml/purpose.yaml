@@ -1,0 +1,21 @@
+---
+title:    Purpose Invest
+subtitle: Web
+year:     2014
+tags:
+    - Adobe CS
+    - AngularJS
+body: >
+    I wrote a cross-platform desktop application in Python for internal use at
+    the company. It allows the selection of comparison groups of stocks and has
+    a custom portfolio feature. It performs the calculations, then writes and
+    graphs the data to an Excel sheet. In addition, it exports the data to Adobe
+    Illustrator compatible XML for the publication of quarterly brochures. This
+    calculator saves the company from maintaining several extensive spreadsheets
+    and saves hours of manual graph data entry.
+
+    I designed a workflow to improve the monthly process of producing pie charts
+    for publication in brochures. I wrote a PHP script that queries a database
+    and formats the data in XML. I then wrote Javascript to use the Variable
+    Library feature of Adobe Illustrator to load the data file and export each
+    chart individually. This again saves many hours of manual data entry.
