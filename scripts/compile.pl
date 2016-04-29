@@ -36,7 +36,7 @@ my $title    = $contents[0]{'title'};
 my $subtitle = $contents[0]{'subtitle'};
 my $year     = $contents[0]{'year'};
 my $body     = $contents[0]{'body'};
-my @tags     = @{$contents[0]{'tags'}};
+my @tags     = @{$contents[0]{'tags'}} if $contents[0]{'tags'};
 
 my $longest = (sort { length($b) <=> length($a) } @tags)[0];
 
