@@ -45,10 +45,11 @@
 }
 
 %% HF sizing
-\addtolength{\headheight}{60pt}      % header height, default 12pt
-\addtolength{\headsep}{25pt}         % head to text separation, default 25pt
+\addtolength{\voffset}{-0.5in}       % reduce top margin = 1 in + \voffset
+\renewcommand{\headheight}{60pt}     % header height, default 12pt
+\renewcommand{\headsep}{10pt}        % head to text separation, default 25pt
 \renewcommand{\headrulewidth}{0pt}   % no rule under header
-\addtolength{\textheight}{-60pt}     % header eats into main page
+\renewcommand{\marginparwidth}{48pt} % margin notes
 
 % Section title style
 \usepackage{titlesec}
