@@ -6,7 +6,7 @@ all: $(ENTRIES)
 	rubber --pdf $(SRC)
 
 %.tex : %.yaml
-	scripts/compile.pl $< $@
+	python scripts/compile.py scripts/templates $< $@
 
 clean:
 	rm -f main.pdf *.aux *.log yaml/*.tex
