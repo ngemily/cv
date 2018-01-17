@@ -1,7 +1,7 @@
 \cvitem{<year>}{<title>}{<subtitle>}
 \blap{\llap{\makebox[2em + \widthof{<longest>} + \widthof{<subtitle>}][l]{
     \shortstack[r]{
-        < tags | join(' \\\\ ') >
+        < tags | map('rectangled') | join(' \\\\ ') >
     }
 }}}
 <body>

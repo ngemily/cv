@@ -17,14 +17,13 @@ env = Environment(
     variable_start_string='<',
     variable_end_string='>',
 )
+# difficult to work into jinja template; {{ }} messes things up
+env.filters['rectangled'] = lambda s: '\\rectangled{{{}}}'.format(s)
 template = env.get_template('segment.tex')
 
 if not data['tags']:
     data['tags'] = []
 data['longest'] = max(data['tags'], key=len) if data['tags'] else ""
-
-# difficult to work into jinja; {{ }} messes things up
-data['tags'] = map(lambda s: '\\rectangled{{{}}}'.format(s), data['tags'])
 
 with open(output_filename, 'w+') as f:
     f.write(template.render(data))
