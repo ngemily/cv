@@ -8,6 +8,7 @@
 \usepackage{calc}
 \usepackage{fontawesome}
 \usepackage{fullpage}
+\usepackage{hyperref}
 
 % Colors
 \usepackage[dvipsnames]{xcolor}
@@ -65,8 +66,8 @@
     labelsep=\the\gutterwidth,leftmargin=!}
 
 %% item macro
-%   <year> <item> <short description>
-\newcommand{\cvitem}[3]{\item[#1] \textbf{#2} \\ \textsl{#3}}
+%   <year> <item> <short description> <url>
+\newcommand{\cvitem}[4]{\item[#1] \textbf{#2} \\ \textsl{#3} \\ \url{#4}}
 \newcommand{\cvitemcompact}[3]{\item[#1] \itab{\textbf{#2}} \tab{\textit{#3}}}
 
 %% MS Word like tab alignment
@@ -128,7 +129,7 @@
 
 \begin{cvlist}
     \cvitem{2016}{University of Toronto}{\textnormal{BA.Sc. in Engineering
-    Science Major in Electrical and Computer Engineering}}
+    Science Major in Electrical and Computer Engineering}}{}
 \end{cvlist}
 
 \cvsection[OliveGreen]{Work}
@@ -167,6 +168,7 @@
 \cvsection[Blue]{Projects}
 
 \begin{cvlist}
+    % \input{yaml/vp4}
     \input{yaml/detectinator}
     \input{yaml/cpu}
 \end{cvlist}
@@ -177,5 +179,7 @@
     \item skill 1
     \item skill 2
 \end{itemize}
+
+Made with \LaTeX
 
 \end{document}
