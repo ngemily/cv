@@ -4,6 +4,7 @@
 yaml/*.tex
 main.log
 main.pdf
+main.out
 
 # Private
 contact.tex
