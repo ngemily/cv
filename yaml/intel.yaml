@@ -1,0 +1,19 @@
+---
+title:    Intel PSG
+subtitle: Senior Software Engineer, Device Modeling
+year:     2021 - 2016
+tags:
+    - DevOps
+    - Timing Modeling
+    - Python
+body: >
+    Took on leadership of project that analyzed device data and created
+    infrastructure for data driven intake of device data.  Instated process 
+    improvements including devops, changelog, and launching web-based user 
+    documentation.
+
+
+    Took ownership of timing modeling for I/O Subsytem.  Intake timing data from
+    hardware design team, providing feedback to hardware team.  Verify software
+    modeling against timing data to ensure correct timing analysis for end
+    customers.  Assist with timing closure challenges for configurable IP.

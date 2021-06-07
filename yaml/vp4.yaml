@@ -6,7 +6,7 @@ year: 2018
 tags:
     - VimL
 body: >
-    This is a Vim plugin for integration with Perforce.  Perforce a popular
-    version control system (VCS) for companies with large codebases.  It
-    provides features to view diffs, file history, and work with changelists all
-    within Vim.
+    Vim plugin for integration with Perforce version control system, based on
+    popular "fugitive" plugin for integration with git.  Provides features to
+    view diffs, file history, and work with changelists.  Designed with an
+    emphasis for native Vim features and usage.
