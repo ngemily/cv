@@ -20,10 +20,14 @@ env = Environment(
 # difficult to work into jinja template; {{ }} messes things up
 env.filters['rectangled'] = lambda s: '\\rectangled{{{}}}'.format(s)
 template = env.get_template('segment.tex')
+template_url = env.get_template('segment_url.tex')
 
 if not data['tags']:
     data['tags'] = []
 data['longest'] = max(data['tags'], key=len) if data['tags'] else ""
 
 with open(output_filename, 'w+') as f:
-    f.write(template.render(data))
+    if 'url' in data:
+        f.write(template_url.render(data))
+    else:
+        f.write(template.render(data))
