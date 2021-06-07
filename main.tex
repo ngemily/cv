@@ -9,6 +9,7 @@
 \usepackage{fontawesome}
 \usepackage{fullpage}
 \usepackage{hyperref}
+\usepackage{multicol}
 
 % Colors
 \usepackage[dvipsnames]{xcolor}
@@ -34,11 +35,6 @@
     \phone \hfill \email \hfill \github
     \color{black}
 }
-\rhead{
-    \color{\accentcolor}
-    \address\\~\\
-    \color{black}
-}
 \lfoot{
     \color{\accentcolor}
     \phone \hfill \email \hfill \github
@@ -59,7 +55,7 @@
     {\rule{\the\myleft+\the\gutterwidth}{0pt}}[ \hrulefill]
 
 % List styles
-\usepackage{enumitem}
+\usepackage[inline]{enumitem}
 \SetLabelAlign{myright}{\strut\smash{\parbox[t]{\labelwidth}{\raggedleft#1}}}
 \newlist{cvlist}{description}{1}
 \setlist[cvlist]{style=multiline,align=myright,labelwidth=\the\myleft,
@@ -67,7 +63,8 @@
 
 %% item macro
 %   <year> <item> <short description> <url>
-\newcommand{\cvitem}[4]{\item[#1] \textbf{#2} \\ \textsl{#3} \\ \url{#4}}
+\newcommand{\cvitem}[3]{\item[#1] \textbf{#2} \\ \textsl{#3}}
+\newcommand{\cvitemurl}[4]{\item[#1] \textbf{#2} \\ \textsl{#3} \\ \url{#4}}
 \newcommand{\cvitemcompact}[3]{\item[#1] \itab{\textbf{#2}} \tab{\textit{#3}}}
 
 %% MS Word like tab alignment
@@ -135,7 +132,7 @@
 \cvsection[OliveGreen]{Work}
 
 \begin{cvlist}
-    % \input{yaml/intel}
+    \input{yaml/intel}
     \input{yaml/altera}
     \input{yaml/purpose}
     \input{yaml/penyopal}
@@ -149,10 +146,21 @@
 
 \cvsection[Green]{Skills}
 
-\begin{itemize}
-    \item skill 1
-    \item skill 2
-\end{itemize}
+\newcommand{\CC}{C\nolinebreak\hspace{-.05em}\raisebox{.4ex}{\tiny\bf +}\nolinebreak\hspace{-.10em}\raisebox{.4ex}{\tiny\bf +}}
+\def\CC{{C\nolinebreak[4]\hspace{-.05em}\raisebox{.4ex}{\tiny\bf ++}}}
+
+\begin{cvlist}
+\begin{itemize*}
+    \item python
+    \item \CC
+    \item Unix
+    \item Vim
+    % \item   Python
+    % \item ﭱ \CC
+    % \item Unix
+    % \item  Vim
+\end{itemize*}
+\end{cvlist}
 
 Made with \LaTeX
 
