@@ -3,7 +3,7 @@ SRC=main.tex
 ENTRIES := $(patsubst %.yaml,%.tex,$(wildcard yaml/*.yaml))
 
 all: $(ENTRIES)
-	pdflatex $(SRC)
+	xelatex $(SRC)
 
 %.tex : %.yaml
 	python3 scripts/compile.py scripts/templates $< $@
