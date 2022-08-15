@@ -6,13 +6,7 @@ tags:
     - Adobe CS
     - AngularJS
 body: >
-    Designed desktop app for internal use to perform portforlio related
-    calculations.  App exports to Excel and Adobe Illustrator XML for the
-    publication of quarterly brochures.  Saved company from maintaining several
-    extensive spreadsheets and hours of manual graph data entry.
-
-
-    Designed workflow to improve monthly process of producing pie charts for use
-    in Adobe Illustrator.  Workflow queries database and formats for Adobe
-    Illustrator.  Wrote script to automate process on Adobe Illustrator side
-    to load data and export charts.
+    Created workflow to query data and produce pie charts for use in Adobe
+    Illustrator, eliminating manual effort.  Created desktop app for portforlio
+    rebalancing computations, integrated with workflow to produce published
+    brochures.
