@@ -8,12 +8,17 @@ tags:
     - Python
 body: >
     Took on leadership of project that analyzed device data and created
-    infrastructure for data driven intake of device data.  Instated process 
-    improvements including devops, changelog, and launching web-based user 
+    infrastructure for data driven intake of device data.  Implemented process
+    improvements including devops, changelog, and launching web-based user
     documentation.
 
 
-    Took ownership of timing modeling for I/O Subsytem.  Intake timing data from
-    hardware design team, providing feedback to hardware team.  Verify software
-    modeling against timing data to ensure correct timing analysis for end
-    customers.  Assist with timing closure challenges for configurable IP.
+    Took ownership of timing modeling for I/O Subsytem.  Processed incoming
+    timing data from hardware design team and provided feedback.  Verified
+    software modeling against timing data to ensure correct timing analysis for
+    end customers.  Assisted with timing closure challenges for configurable IP.
+
+
+    Timing closure work lead to development of US Patent \#10320393 "Dynamic
+    multicycles for core-periphery timing closure," on which I am the third
+    author.
