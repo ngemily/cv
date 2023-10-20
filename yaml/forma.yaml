@@ -7,8 +7,9 @@ tags:
     - Data Pipeline
     - ETL architecture
 body: >
-    Designed and rolled out new architecture for data platform, moving from
-    single compute to distributed model.  Onboarded team onto Databricks
-    platform, making processes more scalable and observable and providing data
-    access to non-technical analysts.  Led migration from iterative computing to
-    parallel computing using Spark framework, and led workshops on best practices.
+    Designed and rolled out new architecture for data platform on Databricks.
+    New platform moves from single compute to distributed, making processes
+    scalable to larger data payloads.  Additionally, improves observability in
+    data pipeline and provides data access to non-technical analysts.  Onboarded
+    team onto new platform.  Led migration from iterative computing to parallel
+    computing using Spark framework, and led workshops on best practices.
